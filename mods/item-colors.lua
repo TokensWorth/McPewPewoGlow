@@ -144,6 +144,10 @@ module.enable = function(self)
                 local r, g, b = GetItemQualityColor(quality)
                 button.ShaguTweaks_border:SetBackdropBorderColor(r,g,b)
               end
+			  local sName, sLink, iRarity, iLevel, iMinLevel, sType, sSubType, iStackCount = GetItemInfo(istring);
+			   if sType == "Quest" then
+                button.ShaguTweaks_border:SetBackdropBorderColor(1,1,0)
+			   end 
             end
           end
         end
